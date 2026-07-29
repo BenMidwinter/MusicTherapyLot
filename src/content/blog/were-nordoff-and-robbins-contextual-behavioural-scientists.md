@@ -28,9 +28,3 @@ Perhaps the most famous concept from their work is the profound interpersonal me
 ### Bridging the Gap
 
 Nordoff and Robbins did not need the terminology of RFT to change lives, as their phenomenological descriptions were already incredibly accurate to the human experience. However, as the profession looks to the future, moving from metaphor to mechanism validates the art of their historical practice while rendering its behavioural foundations visible, measurable, and communicable. CBS does not strip the magic from their work. Instead, it reveals the intricate science beneath the art, showing us that whether we are manipulating a musical motif or a linguistic rule, we are pulling the same relational levers.
-
-              [Ben Richardson](/blog?author=66fd4991bb2c7f36470f6e08)
-
-[https://hello@thatmusictherapylot.uk](https://hello@thatmusictherapylot.uk)
-
-        <section

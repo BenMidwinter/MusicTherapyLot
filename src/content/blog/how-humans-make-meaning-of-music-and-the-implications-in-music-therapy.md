@@ -130,9 +130,3 @@ Our current reliance on poetic, descriptive prose is entirely understandable. Th
 Today, we no longer need to rely on speculative, unobservable psychodynamic mechanisms or poetic placeholders to defend our clinical efficacy. By using **Relational Frame Theory (RFT)**, we can bridge the gap between art and science. We can cleanly separate the *biology* of the medium (the non-arbitrary physics of sound waves) from the *meaning* of the experience (the arbitrary, derived relational networks activated by those sounds).
 
 When we retrain our clinical gaze, we discover that "musical containment" is the successful establishment of a hierarchical frame, and "musical dialogue" is the live training of deictic perspective-taking. We realise that music therapy is not a mystical alternative to talk therapy, but a highly sophisticated, multi-dimensional behavioral crucible. It catches the client's raw, unedited psychological networks live at the instrument, allowing us to protect the traditional magic of our clinical art while validating its underlying physics to the modern medical world.
-
-              [Ben Richardson](/blog?author=66fd4991bb2c7f36470f6e08)
-
-[https://hello@thatmusictherapylot.uk](https://hello@thatmusictherapylot.uk)
-
-        <section

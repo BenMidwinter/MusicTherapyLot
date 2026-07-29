@@ -46,9 +46,3 @@ It is time to pivot from a defensive posture to an active, articulate one. Every
 If we want the healthcare sector to respect us as an essential, process-driven clinical intervention, we have to talk like it. We need to demystify our practice and clearly articulate the specific mechanisms that keep patients safe and get them moving forward.
 
 Let's channel our collective frustration into making our clinical value absolutely impossible to ignore.
-
-              [Ben Richardson](/blog?author=66fd4991bb2c7f36470f6e08)
-
-[https://hello@thatmusictherapylot.uk](https://hello@thatmusictherapylot.uk)
-
-        <section

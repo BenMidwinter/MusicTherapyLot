@@ -74,9 +74,3 @@ For a moment, don’t call it ‘attunement’ or ‘meeting’ - instead, look 
 When the session is over, ask yourself honestly; did tracking the function make the session feel any less meaningful?  Did it diminish the profound interpersonal connection you shared?
 
 I suspect you will find that it does the exact opposite.  Recognising that you are strategically using a symbolic language to help a client to build new, flexible ways of being, illuminates exactly why the art matters so much.
-
-              [Ben Richardson](/blog?author=66fd4991bb2c7f36470f6e08)
-
-[https://hello@thatmusictherapylot.uk](https://hello@thatmusictherapylot.uk)
-
-        <section
