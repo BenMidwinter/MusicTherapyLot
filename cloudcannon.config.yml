@@ -1,0 +1,49 @@
+# CloudCannon configuration for That Music Therapy Lot
+# Blog posts live in Astro content collections and are edited here.
+
+collections_config:
+  blog:
+    path: src/content/blog
+    url: /blog/[slug]/
+    output: true
+    icon: notes
+    _enabled_editors:
+      - content
+      - data
+    schemas:
+      default:
+        path: .cloudcannon/schemas/post.md
+        name: New blog post
+        create:
+          path: '[relative_base_path]/{title|slugify}.md'
+        new_preview_url: /blog/
+    _structures:
+      posts:
+        values:
+          - value:
+              _schema: default
+
+paths:
+  static: public
+  uploads: public/images
+
+timezone: Europe/London
+
+_inputs:
+  title:
+    type: text
+    comment: Post title shown on the blog and in search results
+  description:
+    type: textarea
+    comment: Short summary for the blog index and SEO
+  pubDate:
+    type: datetime
+    comment: Publication date
+  draft:
+    type: switch
+    comment: Hide from the live site when on
+    options:
+      preview:
+        text:
+          - Published
+          - Draft

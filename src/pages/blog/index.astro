@@ -1,0 +1,64 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const posts = (await getCollection('blog', ({ data }) => {
+  return import.meta.env.PROD ? data.draft !== true : true;
+})).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const dateFormatter = new Intl.DateTimeFormat('en-GB', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+---
+
+<BaseLayout
+  title="Blog — That Music Therapy Lot | Therapy and Consultation in London"
+  description="Writing on Process-Based Music Therapy, clinical practice, consultation, and outcomes from That Music Therapy Lot in Walthamstow, London, E17."
+>
+  <Header />
+  <main id="main">
+    <header class="page-hero">
+      <p class="section__eyebrow">Blog</p>
+      <h1 class="page-hero__title">Notes from the practice.</h1>
+      <p class="page-hero__lede">
+        Process-Based Music Therapy, supervision, consultation, and clinical
+        measurement — written for clinicians and curious readers alike.
+      </p>
+    </header>
+
+    <section class="section section--tight" aria-label="Blog posts">
+      {
+        posts.length === 0 ? (
+          <p class="placeholder-banner reveal">
+            Posts are on the way. New writing will appear here and can be edited
+            in CloudCannon.
+          </p>
+        ) : (
+          <ul class="post-list">
+            {posts.map((post) => (
+              <li class="post-list__item reveal">
+                <p class="post-list__date">
+                  <time datetime={post.data.pubDate.toISOString()}>
+                    {dateFormatter.format(post.data.pubDate)}
+                  </time>
+                </p>
+                <h2 class="post-list__title">
+                  <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+                </h2>
+                <p class="post-list__excerpt">{post.data.description}</p>
+                <p class="post-list__cta">
+                  <a href={`/blog/${post.id}/`}>Read post →</a>
+                </p>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,266 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const tiers = [
+  {
+    tier: 'Tier 1',
+    name: 'Universal',
+    focus: 'Setting Climate & Relational Design',
+    delivery:
+      'Environmental and sensory design, relational policy development, and whole-staff capacity building to create a low-arousal, therapeutically informed baseline.',
+  },
+  {
+    tier: 'Tier 2',
+    name: 'Targeted',
+    focus: 'Early Intervention & Group Provision',
+    delivery:
+      'Short-term reflective groups, targeted skill-building, and rapid staff consultation to prevent emerging difficulties from escalating into placement breakdowns.',
+  },
+  {
+    tier: 'Tier 3',
+    name: 'Specialist',
+    focus: 'Complex Formulation & Dynamic Therapy',
+    delivery:
+      'Specialist 1:1 clinical therapy, deep relational formulation, and multi-agency clinical oversight for individuals with acute or complex needs.',
+  },
+];
+
+const modules = [
+  {
+    number: '01',
+    title: 'Dynamic Clinical Provision',
+    subtitle: 'Responsive Pathways',
+    intro:
+      'Therapy delivered according to real-time clinical need, not rigid administrative schedules.',
+    points: [
+      {
+        label: 'Break the Waiting Loop',
+        text: 'Clinical support should not depend entirely on static funding allocations or delayed paperwork. We establish responsive referral pathways that allow settings to deploy targeted clinical intervention the moment a student or resident shows signs of distress.',
+      },
+      {
+        label: 'Flexibility by Design',
+        text: 'Interventions expand, contract, or transition into consultative staff support based on ongoing clinical formulation. When a client stabilizes, capacity shifts back to supporting the team around them—maximizing the impact of your budget.',
+      },
+      {
+        label: 'Process-Informed Assessment',
+        text: 'Rapid clinical assessments that look beyond behavioral labels to identify the functional, sensory, and relational drivers behind distressed behavior.',
+      },
+    ],
+  },
+  {
+    number: '02',
+    title: '“Experts at Hand” Embedded Staff Consultation',
+    subtitle: 'Upskilling your front-line workforce through immediate, specialist access.',
+    intro: null,
+    points: [
+      {
+        label: 'Clinical Formulation Surgeries',
+        text: 'Regular, scheduled case-discussion spaces where educators, SENCOs, and care staff can unpack complex student presentations with a senior clinician.',
+      },
+      {
+        label: 'Live In-Class / In-Care Coaching',
+        text: 'Moving clinical insights out of the therapy room and onto the floor. We help staff adapt environments, communication styles, and co-regulation strategies in real time.',
+      },
+      {
+        label: 'De-escalation Through Understanding',
+        text: 'Shifting staff perspectives from reactive behavior management to functional understanding—reducing incidents, exclusions, and staff distress.',
+      },
+    ],
+  },
+  {
+    number: '03',
+    title: 'Environmental & Relational Audits',
+    subtitle:
+      'Aligning your physical and cultural space with the neurological and emotional needs of your cohort.',
+    intro: null,
+    points: [
+      {
+        label: 'Sensory & Relational Climate Mapping',
+        text: 'Evaluating physical spaces, transitions, and daily routines to identify systemic triggers and high-stress hotspots.',
+      },
+      {
+        label: 'Policy to Practice Alignment',
+        text: 'Reviewing behavior, attendance, and wellbeing policies to ensure they reflect contemporary relational and trauma-informed practices without compromising boundaries or structure.',
+      },
+      {
+        label: 'EBSA Frameworks',
+        text: 'Designing systemic reintegration pathways specifically for children and young people experiencing severe attendance barriers and school-based anxiety.',
+      },
+    ],
+  },
+  {
+    number: '04',
+    title: 'Workplace Health & Workforce Sustainability',
+    subtitle: 'Supporting the team that delivers the care.',
+    intro: null,
+    points: [
+      {
+        label: 'Reflective Practice Groups',
+        text: 'Structured, confidential spaces for staff teams facing high secondary trauma, compassion fatigue, and burnout.',
+      },
+      {
+        label: 'Organizational De-briefing',
+        text: 'Facilitated clinical debriefs following acute critical incidents or prolonged high-stress periods within a setting.',
+      },
+      {
+        label: 'Leadership Supervision',
+        text: 'Executive clinical consultation for Headteachers, SENCOs, and Registered Managers navigating the psychological weight of institutional leadership.',
+      },
+    ],
+  },
+];
+
+const reasons = [
+  {
+    title: 'We Understand the System',
+    text: 'We know the operational pressures of EHCP processes, Ofsted/CQC frameworks, attendance targets, and budget constraints. Our recommendations are practical, actionable, and aligned with your operational reality.',
+  },
+  {
+    title: 'Dual Expertise',
+    text: 'We bring deep clinical knowledge of complex psychological, non-verbal, and developmental needs, alongside an understanding of systemic organizational health.',
+  },
+  {
+    title: 'Data-Informed Outcomes',
+    text: 'We use clear, structured frameworks to track client engagement, staff confidence, and environmental impact—giving leadership teams clear metrics for institutional reporting and governance.',
+  },
+];
+---
+
+<BaseLayout
+  title="Institutional & Workplace Consultation — That Music Therapy Lot | Therapy and Consultation in London"
+  description="Strategic clinical support and consultation for education, care and specialist settings in London. Integrated therapeutic partnership for MATs, alternative provision, and care providers."
+>
+  <Header />
+  <main id="main">
+    <header class="page-hero">
+      <p class="section__eyebrow reveal">Institutional &amp; workplace consultation</p>
+      <h1 class="page-hero__title reveal">Strategic clinical support for education, care &amp; specialist settings</h1>
+      <p class="page-hero__lede reveal">
+        Moving beyond the sessional model — integrated clinical partnership for
+        leadership teams, MATs, alternative provisions, and care providers.
+      </p>
+      <div class="hero__actions reveal" style="margin-top: 1.75rem;">
+        <a class="btn btn--primary" href="/#contact">Book a strategic consultation</a>
+      </div>
+    </header>
+
+    <div class="section section--tight" style="padding-top: 0;">
+      <figure class="page-visual reveal">
+        <img
+          src="/images/web/BoomWhackers.jpg"
+          alt="Colourful boomwhackers clustered together, viewed from above"
+          width="2400"
+          height="1350"
+          loading="lazy"
+        />
+      </figure>
+    </div>
+
+    <section class="section section--tight" aria-labelledby="beyond-title">
+      <div class="prose reveal">
+        <h2 id="beyond-title">Moving beyond the sessional model</h2>
+        <p>
+          Traditional therapeutic provision in educational and residential settings
+          is often fragmented—trapped behind rigid administrative thresholds,
+          delayed until crisis point, or restricted to isolated 1:1 sessions.
+        </p>
+        <p>
+          We work differently. We partner with leadership teams, Multi-Academy
+          Trusts (MATs), alternative provisions, and care providers to design and
+          deliver integrated therapeutic ecosystems.
+        </p>
+        <p>
+          We combine deep clinical expertise in developmental trauma,
+          neurodiversity, EBSA (Emotionally Based School Avoidance), and complex
+          SEMH with a precise understanding of institutional operations. We don’t
+          just deliver therapy; we build setting capacity, stabilize placements,
+          and ensure clinical need is understood and met at every level of your
+          organization.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="funnel-title">
+      <p class="section__eyebrow reveal">The Intervention Funnel</p>
+      <h2 class="section__title reveal" id="funnel-title">So no young person falls through the cracks.</h2>
+      <p class="section__lede reveal">
+        Therapeutic support has to be woven into the fabric of the setting —
+        from whole-setting climate down to specialist clinical work. The
+        Intervention Funnel moves seamlessly between those layers, so need is
+        met at every level and nobody is left waiting in the gaps.
+      </p>
+
+      <div class="tier-list tier-list--funnel">
+        {
+          tiers.map((tier) => (
+            <article class="tier reveal">
+              <p class="tier__meta">
+                <span class="tier__label">{tier.tier}</span>
+                <span class="tier__name">{tier.name}</span>
+              </p>
+              <h3 class="tier__focus">{tier.focus}</h3>
+              <p class="tier__delivery">{tier.delivery}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="modules-title">
+      <p class="section__eyebrow reveal">Core consultation modules</p>
+      <h2 class="section__title reveal" id="modules-title">How we work with you.</h2>
+
+      <div class="module-stack">
+        {
+          modules.map((mod) => (
+            <article class="module reveal">
+              <p class="module__number">{mod.number}</p>
+              <h3 class="module__title">{mod.title}</h3>
+              {mod.subtitle && <p class="module__subtitle">{mod.subtitle}</p>}
+              {mod.intro && <p class="module__intro">{mod.intro}</p>}
+              <ul class="module__points">
+                {mod.points.map((point) => (
+                  <li>
+                    <strong>{point.label}</strong>
+                    <span>{point.text}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="why-title">
+      <p class="section__eyebrow reveal">Why partner with us</p>
+      <h2 class="section__title reveal" id="why-title">Built for how settings actually work.</h2>
+
+      <div class="reasons">
+        {
+          reasons.map((reason) => (
+            <article class="reason reveal">
+              <h3>{reason.title}</h3>
+              <p>{reason.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="cta-title">
+      <div class="consult-cta reveal">
+        <h2 id="cta-title">Transform your setting’s therapeutic strategy</h2>
+        <p>
+          Whether you need to audit your current provision, establish an embedded
+          consultation model, or access specialist dynamic therapy, we are ready
+          to build a bespoke package for your organization.
+        </p>
+        <a class="btn btn--primary" href="/#contact">Book a strategic consultation discussion</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

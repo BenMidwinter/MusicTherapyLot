@@ -1,0 +1,14 @@
+# Cloudflare Pages / Netlify-style redirects (true HTTP 301s when proxied).
+# GitHub Pages alone serves Astro's HTML meta-refresh redirects from the build.
+
+/home                               /                               301
+/therapyforyou                      /therapy                        301
+/professionalsandinstitutions       /consulting                     301
+/contact                            /                               301
+/appointments                       /therapy                        301
+/packages                           /therapy                        301
+/online                             /therapy                        301
+/measurement                        /consulting                     301
+/futurefocussed                     /                               301
+/simt                               /                               301
+/new-page-3                         /                               301

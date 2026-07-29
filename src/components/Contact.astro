@@ -1,0 +1,69 @@
+---
+const formAction = 'https://formsubmit.co/hello@thatmusictherapylot.uk';
+---
+
+<section class="section" id="contact" aria-labelledby="contact-title">
+  <p class="section__eyebrow reveal">Contact</p>
+  <h2 class="section__title reveal" id="contact-title">Let’s talk.</h2>
+  <p class="section__lede reveal">
+    Whether you are reaching out about therapy, consulting, supervision, or SECAT® — a few
+    short lines are enough to start. There’s no pressure to have it all figured out.
+  </p>
+
+  <div class="contact-layout">
+    <div class="contact-details reveal">
+      <p>
+        Email:
+        {' '}<a href="mailto:hello@thatmusictherapylot.uk">hello@thatmusictherapylot.uk</a>
+      </p>
+      <p>Location: Walthamstow, Waltham Forest, London, E17</p>
+      <p>We usually reply within two to three working days.</p>
+      <p>
+        Looking for integrative talking therapy?
+        {' '}<a href="https://therapywithben.uk/" rel="noopener noreferrer" target="_blank">Therapy With Ben</a>
+        is the place for that.
+      </p>
+      <p class="contact-crisis">
+        Please note: Messages sent via this site are for general enquiries only.
+        Please do not include detailed clinical information in your initial email.
+        If you are experiencing an urgent mental health crisis, please contact your
+        GP or local NHS crisis services.
+      </p>
+    </div>
+
+    <form class="contact-form reveal" action={formAction} method="POST">
+      <input type="hidden" name="_subject" value="Website enquiry — That Music Therapy Lot" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+      <label>
+        Name
+        <input type="text" name="name" autocomplete="name" required />
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" autocomplete="email" required />
+      </label>
+      <label>
+        I’m enquiring about
+        <select name="enquiry_type" required>
+          <option value="">Please select</option>
+          <option value="Therapy">Music therapy for myself</option>
+          <option value="Consulting">Institutional / workplace consultation</option>
+          <option value="Supervision">Clinical supervision</option>
+          <option value="SECAT">SECAT®</option>
+          <option value="Other">Something else</option>
+        </select>
+      </label>
+      <label>
+        Message
+        <textarea name="message" required></textarea>
+      </label>
+      <button class="btn btn--primary" type="submit">Send message</button>
+      <p class="form-note">
+        Your message is sent to hello@thatmusictherapylot.uk.
+      </p>
+    </form>
+  </div>
+</section>

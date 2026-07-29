@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const pillars = [
+  {
+    number: '01',
+    title: 'Process-Based & Functional Formulations',
+    points: [
+      'Look past surface behaviors and musical patterns to understand their underlying function.',
+      'Integrate contextual, process-based frameworks (including ACT/RFT principles adapted for creative arts therapies) into your practice.',
+      'Shift your clinical focus from “managing symptoms” to building psychological flexibility, emotional regulation, and authentic relational connection through music.',
+    ],
+  },
+  {
+    number: '02',
+    title: 'Translating Creative Work for MDTs',
+    points: [
+      'Bridge the gap between music therapy jargon and multidisciplinary understanding.',
+      'Learn how to translate non-verbal, musical, and improvisational phenomena into clear, accessible language that psychiatrists, SENCOs, occupational therapists, social workers, and care teams immediately grasp.',
+      'Gain confidence presenting in ward rounds, CPAs, EHCP reviews, and multi-agency meetings—positioning your therapy not as an optional extra, but as a core clinical driver.',
+    ],
+  },
+  {
+    number: '03',
+    title: 'Professional Identity & Clinical Voice',
+    points: [
+      'Define who you are as a clinician and how you operate within complex systems.',
+      'Navigate the friction of working as a sole arts therapist within large, highly medicalized, or educational institutions.',
+      'Refine your clinical documentation, reporting, and goal-setting so your written work reflects the true depth of your intervention.',
+    ],
+  },
+  {
+    number: '04',
+    title: 'Sustaining Your Capacity',
+    points: [
+      'Reflective practice that guards against burnout and compassion fatigue.',
+      'Process secondary trauma, transference/countertransference, and the emotional weight of high-demand caseloads (such as EBSA, complex trauma, and acute SEMH).',
+      'Maintain a grounded, sustainable practice where you feel clear, competent, and energized by your work.',
+    ],
+  },
+];
+
+const audiences = [
+  {
+    title: 'Newly Qualified Music Therapists',
+    text: 'Wanting to build a robust, process-informed clinical foundation as they step into independent or institutional practice.',
+  },
+  {
+    title: 'Experienced Practitioners',
+    text: 'Looking to move away from purely psychodynamic or humanistic descriptions toward a functional, contemporary framework.',
+  },
+  {
+    title: 'Embedded Therapists in NHS, Education, or Care',
+    text: 'Who feel their role is misunderstood by their team and want to articulate their impact in a language the MDT respects.',
+  },
+];
+
+const formats = [
+  {
+    title: '1:1 Clinical Supervision',
+    text: '50-minute individual sessions (online or in person), held monthly or fortnightly.',
+  },
+  {
+    title: 'Group Reflective Supervision',
+    text: 'Small peer cohorts focusing on case formulation, MDT communication, and process-based techniques.',
+  },
+  {
+    title: 'Custom Employer-Funded Packages',
+    text: 'Supervision arrangements funded directly by your workplace or trust.',
+  },
+];
+---
+
+<BaseLayout
+  title="Clinical Supervision for Music Therapists — That Music Therapy Lot | Therapy and Consultation in London"
+  description="Process-informed clinical supervision for Music Therapists in London — deepen impact, elevate clinical voice, and move from describing what happened to formulating how it works."
+>
+  <Header />
+  <main id="main">
+    <header class="page-hero">
+      <p class="section__eyebrow reveal">Clinical supervision for music therapists</p>
+      <h1 class="page-hero__title reveal">Process-informed supervision to deepen impact &amp; elevate clinical voice</h1>
+      <p class="page-hero__lede reveal">
+        Moving beyond “what happened” to “how it works” — supervision grounded
+        in Process-Based Music Therapy and functional clinical thinking.
+      </p>
+      <div class="hero__actions reveal" style="margin-top: 1.75rem;">
+        <a class="btn btn--primary" href="/#contact">Schedule an initial supervisory discussion</a>
+      </div>
+    </header>
+
+    <div class="section section--tight" style="padding-top: 0;">
+      <figure class="page-visual reveal">
+        <img
+          src="/images/web/PianoKeys.jpg"
+          alt="Close-up of black and white grand piano keys"
+          width="2400"
+          height="1350"
+          loading="lazy"
+        />
+      </figure>
+    </div>
+
+    <section class="section section--tight" aria-labelledby="beyond-title">
+      <div class="prose reveal">
+        <h2 id="beyond-title">Moving beyond “what happened” to “how it works”</h2>
+        <p>
+          Music therapy is inherently relational, non-verbal, and complex. But
+          when it comes to supervision, many therapists find themselves stuck
+          either in purely descriptive accounts of musical moments or trying to
+          translate intuitive clinical work into rigid, medicalized boxes.
+        </p>
+        <p>
+          Supervision here is structured differently. Grounded in Process-Based
+          Music Therapy (PBMT) and functional clinical thinking, we look
+          underneath the musical surface. We focus on the active psychological
+          processes driving client change—helping you move from simply describing
+          what happened in the room to clearly formulating why it worked, what
+          function it served, and how to build on it.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="pillars-title">
+      <p class="section__eyebrow reveal">Core pillars of our supervision</p>
+      <h2 class="section__title reveal" id="pillars-title">How we sharpen the work.</h2>
+
+      <div class="module-stack">
+        {
+          pillars.map((pillar) => (
+            <article class="module reveal">
+              <p class="module__number">{pillar.number}</p>
+              <h3 class="module__title">{pillar.title}</h3>
+              <ul class="module__points">
+                {pillar.points.map((point) => (
+                  <li>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="who-title">
+      <p class="section__eyebrow reveal">Who this is for</p>
+      <h2 class="section__title reveal" id="who-title">Built for where you are now.</h2>
+
+      <div class="reasons">
+        {
+          audiences.map((audience) => (
+            <article class="reason reveal">
+              <h3>{audience.title}</h3>
+              <p>{audience.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="how-title">
+      <p class="section__eyebrow reveal">How supervision works</p>
+      <h2 class="section__title reveal" id="how-title">Flexible structures for real practice.</h2>
+      <p class="section__lede reveal">
+        We offer supervisory arrangements tailored to your practice context.
+      </p>
+
+      <div class="tier-list">
+        {
+          formats.map((format) => (
+            <article class="tier reveal">
+              <h3 class="tier__focus">{format.title}</h3>
+              <p class="tier__delivery">{format.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="cta-title">
+      <div class="consult-cta reveal">
+        <h2 id="cta-title">Ready to sharpen your clinical practice?</h2>
+        <p>
+          Book an initial informal chat to discuss your current caseload,
+          professional goals, and how process-informed supervision can support
+          your practice.
+        </p>
+        <a class="btn btn--primary" href="/#contact">Schedule an initial supervisory discussion</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

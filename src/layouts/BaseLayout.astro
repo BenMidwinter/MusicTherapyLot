@@ -1,0 +1,221 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
+
+const siteUrl = (Astro.site?.href ?? 'https://thatmusictherapylot.uk').replace(/\/$/, '');
+const siteName = 'That Music Therapy Lot';
+const brandTitle = 'That Music Therapy Lot | Therapy and Consultation in London';
+const defaultDescription =
+  'Integrative Psychotherapy and Process-Based Music Therapists specialising in trauma work with adolescents and young adults in Walthamstow, London, E17. Experts in clinical excellence, providing supervision and consultations to individuals and organisations. Creator of SECAT® — the first process-based outcomes tool for the Creative Arts Therapies.';
+const defaultKeywords =
+  'That Music Therapy Lot, Integrative Psychotherapy, Process-Based Music Therapy, music therapy London, music therapists Walthamstow, Walthamstow London E17, Waltham Forest, clinical assessment, experts in assessment, HCPC music therapist, BAMT, SEMH, trauma therapy adolescents, clinical supervision music therapy, institutional consultation, SECAT, Creative Arts Therapies, Allied Health Professions';
+
+const {
+  title = brandTitle,
+  description = defaultDescription,
+  keywords = defaultKeywords,
+} = Astro.props;
+
+const pathname = Astro.url.pathname;
+const canonical = new URL(pathname, `${siteUrl}/`).href;
+const ogImage = new URL('/og-image.jpg', `${siteUrl}/`).href;
+const isHome = pathname === '/' || pathname === '';
+
+const orgId = `${siteUrl}/#organisation`;
+const personId = `${siteUrl}/#ben`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      url: siteUrl,
+      name: siteName,
+      alternateName: brandTitle,
+      description,
+      inLanguage: 'en-GB',
+      publisher: { '@id': orgId },
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${canonical}#webpage`,
+      url: canonical,
+      name: title,
+      description,
+      isPartOf: { '@id': `${siteUrl}/#website` },
+      about: isHome ? { '@id': orgId } : undefined,
+      inLanguage: 'en-GB',
+    },
+    {
+      '@type': 'ProfessionalService',
+      '@id': orgId,
+      name: siteName,
+      alternateName: 'That Music Therapy Lot — Therapy and Consultation in London',
+      description,
+      url: siteUrl,
+      email: 'hello@thatmusictherapylot.uk',
+      image: ogImage,
+      inLanguage: 'en-GB',
+      areaServed: [
+        {
+          '@type': 'Place',
+          name: 'Walthamstow, Waltham Forest, London, E17',
+        },
+        {
+          '@type': 'AdministrativeArea',
+          name: 'Greater London',
+        },
+        {
+          '@type': 'Country',
+          name: 'United Kingdom',
+        },
+      ],
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Walthamstow',
+        addressRegion: 'London',
+        postalCode: 'E17',
+        addressCountry: 'GB',
+      },
+      founder: { '@id': personId },
+      employee: { '@id': personId },
+      sameAs: [
+        'https://therapywithben.uk/',
+        'https://secat.app/',
+        'https://www.bamt.org/',
+        'https://www.hcpc-uk.org/',
+      ],
+      knowsAbout: [
+        'Process-Based Music Therapy',
+        'Integrative Psychotherapy',
+        'Music therapy',
+        'Clinical assessment',
+        'Clinical supervision',
+        'Institutional consultation',
+        'Trauma',
+        'SEMH',
+        'Adolescents and young adults',
+        'Acceptance and Commitment Therapy',
+        'SECAT',
+        'Creative Arts Therapies outcome measurement',
+        'Walthamstow',
+      ],
+    },
+    {
+      '@type': 'Person',
+      '@id': personId,
+      name: 'Ben Richardson',
+      jobTitle: 'Music Therapist',
+      url: `${siteUrl}/about`,
+      worksFor: { '@id': orgId },
+      sameAs: ['https://therapywithben.uk/'],
+      knowsAbout: [
+        'Process-Based Music Therapy',
+        'Integrative Psychotherapy',
+        'Music therapy',
+        'Clinical assessment',
+        'Acceptance and Commitment Therapy',
+      ],
+    },
+  ],
+};
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="That Music Therapy Lot" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="geo.region" content="GB-LND" />
+    <meta name="geo.placename" content="Walthamstow" />
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:type" content={isHome ? 'website' : 'article'} />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta
+      property="og:image:alt"
+      content="That Music Therapy Lot — Process-Based Music Therapy and consultation in London"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta
+      name="twitter:image:alt"
+      content="That Music Therapy Lot — Process-Based Music Therapy and consultation in London"
+    />
+
+    <meta name="theme-color" content="#f7f1fc" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Karla:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <slot />
+    <script>
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.site-nav');
+
+      toggle?.addEventListener('click', () => {
+        const open = nav?.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      nav?.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('is-open');
+          toggle?.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!prefersReduced) {
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.16, rootMargin: '0px 0px -8% 0px' }
+        );
+        reveals.forEach((el) => observer.observe(el));
+      } else {
+        document.querySelectorAll('.reveal').forEach((el) => el.classList.add('is-visible'));
+      }
+    </script>
+  </body>
+</html>

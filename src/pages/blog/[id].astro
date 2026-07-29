@@ -1,0 +1,53 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+  });
+
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const dateFormatter = new Intl.DateTimeFormat('en-GB', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+---
+
+<BaseLayout
+  title={`${post.data.title} — That Music Therapy Lot | Therapy and Consultation in London`}
+  description={post.data.description}
+>
+  <Header />
+  <main id="main">
+    <article class="section section--tight post">
+      <p class="section__eyebrow">
+        <a href="/blog/">Blog</a>
+      </p>
+      <h1 class="section__title post__title">{post.data.title}</h1>
+      <p class="post__meta">
+        <time datetime={post.data.pubDate.toISOString()}>
+          {dateFormatter.format(post.data.pubDate)}
+        </time>
+      </p>
+      <div class="post__body prose">
+        <Content />
+      </div>
+      <p class="post__back">
+        <a href="/blog/">← All posts</a>
+      </p>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>

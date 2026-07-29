@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="That Music Therapy Lot">
+  <circle cx="32" cy="32" r="32" fill="#f7f1fc"/>
+  <circle cx="32" cy="32" r="28" fill="none" stroke="#6e5084" stroke-width="1.5"/>
+  <path d="M18 38h28M18 32h28M18 26h28" stroke="#226663" stroke-width="1.25" stroke-linecap="round"/>
+  <circle cx="24" cy="38" r="3.2" fill="#6e5084"/>
+  <circle cx="40" cy="26" r="3.2" fill="#226663"/>
+  <path d="M27.2 38V22.5M43.2 26V14.5" stroke="#6e5084" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
