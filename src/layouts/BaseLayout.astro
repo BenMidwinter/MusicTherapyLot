@@ -9,11 +9,12 @@ interface Props {
 
 const siteUrl = (Astro.site?.href ?? 'https://thatmusictherapylot.uk').replace(/\/$/, '');
 const siteName = 'That Music Therapy Lot';
-const brandTitle = 'That Music Therapy Lot | Therapy and Consultation in London';
+const brandTitle =
+  'That Music Therapy Lot | Music Therapy & SEND Consultation in Walthamstow';
 const defaultDescription =
-  'Integrative Psychotherapy and Process-Based Music Therapists specialising in trauma work with adolescents and young adults in Walthamstow, London, E17. Experts in clinical excellence, providing supervision and consultations to individuals and organisations. Creator of SECAT® — the first process-based outcomes tool for the Creative Arts Therapies.';
+  'Home of process-based music therapy and SEND consultancy in Walthamstow, London, E17. Specialists in child, adolescent, and adult trauma. Creator of music therapy and creative arts therapy assessment tool.';
 const defaultKeywords =
-  'That Music Therapy Lot, Integrative Psychotherapy, Process-Based Music Therapy, music therapy London, music therapists Walthamstow, Walthamstow London E17, Waltham Forest, clinical assessment, experts in assessment, HCPC music therapist, BAMT, SEMH, trauma therapy adolescents, clinical supervision music therapy, institutional consultation, SECAT, Creative Arts Therapies, Allied Health Professions';
+  'That Music Therapy Lot, Process-Based Music Therapy, music therapy London, music therapists Walthamstow, Walthamstow SEND consultant, Walthamstow SEND consultancy, SEND consultant London, SEND consultation Walthamstow, Walthamstow London E17, Waltham Forest, SEMH, clinical assessment, HCPC music therapist, BAMT, trauma therapy adolescents, clinical supervision music therapy, institutional consultation, SECAT, Creative Arts Therapies';
 
 const {
   title = brandTitle,
@@ -56,7 +57,8 @@ const jsonLd = {
       '@type': 'ProfessionalService',
       '@id': orgId,
       name: siteName,
-      alternateName: 'That Music Therapy Lot — Therapy and Consultation in London',
+      alternateName:
+        'That Music Therapy Lot — Music Therapy and SEND Consultation in Walthamstow',
       description,
       url: siteUrl,
       email: 'hello@thatmusictherapylot.uk',
@@ -93,8 +95,10 @@ const jsonLd = {
       ],
       knowsAbout: [
         'Process-Based Music Therapy',
-        'Integrative Psychotherapy',
         'Music therapy',
+        'SEND consultancy',
+        'SEND consultation',
+        'Walthamstow SEND consultant',
         'Clinical assessment',
         'Clinical supervision',
         'Institutional consultation',
@@ -111,14 +115,16 @@ const jsonLd = {
       '@type': 'Person',
       '@id': personId,
       name: 'Ben Richardson',
-      jobTitle: 'Music Therapist',
+      jobTitle: 'Music Therapist and SEND Consultant',
       url: `${siteUrl}/about`,
       worksFor: { '@id': orgId },
       sameAs: ['https://therapywithben.uk/'],
       knowsAbout: [
         'Process-Based Music Therapy',
-        'Integrative Psychotherapy',
         'Music therapy',
+        'SEND consultancy',
+        'SEND consultation',
+        'Walthamstow SEND consultant',
         'Clinical assessment',
         'Acceptance and Commitment Therapy',
       ],
@@ -154,7 +160,7 @@ const jsonLd = {
     <meta property="og:image:type" content="image/jpeg" />
     <meta
       property="og:image:alt"
-      content="That Music Therapy Lot — Process-Based Music Therapy and consultation in London"
+      content="That Music Therapy Lot — Process-Based Music Therapy and SEND consultation in Walthamstow"
     />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -163,7 +169,7 @@ const jsonLd = {
     <meta name="twitter:image" content={ogImage} />
     <meta
       name="twitter:image:alt"
-      content="That Music Therapy Lot — Process-Based Music Therapy and consultation in London"
+      content="That Music Therapy Lot — Process-Based Music Therapy and SEND consultation in Walthamstow"
     />
 
     <meta name="theme-color" content="#f7f1fc" />
