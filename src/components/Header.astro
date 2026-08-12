@@ -2,6 +2,7 @@
 const pathname = Astro.url.pathname;
 
 const links = [
+  { href: '/process-based-music-therapy', label: 'Process-Based Music Therapy' },
   { href: '/therapy', label: 'Therapy' },
   { href: '/consulting', label: 'Consulting' },
   { href: '/supervision', label: 'Supervision' },
@@ -9,6 +10,9 @@ const links = [
   { href: '/blog', label: 'Blog' },
   { href: 'https://secat.app/', label: 'SECAT®', external: true },
 ];
+
+const isCurrent = (href: string) =>
+  pathname === href || pathname.startsWith(`${href}/`);
 ---
 
 <header class="site-header">
@@ -36,7 +40,7 @@ const links = [
               {link.label}
             </a>
           ) : (
-            <a href={link.href} aria-current={pathname === link.href ? 'page' : undefined}>
+            <a href={link.href} aria-current={isCurrent(link.href) ? 'page' : undefined}>
               {link.label}
             </a>
           )

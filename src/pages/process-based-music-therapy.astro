@@ -1,0 +1,358 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const processes = [
+  {
+    dimension: 'Cognitive / Relational',
+    target: 'Cognitive Defusion & De-literalisation',
+    affordance:
+      'Observing linguistic thoughts and/or experiences as transient auditory events, rather than literal imperatives, through relational framing.',
+  },
+  {
+    dimension: 'Affective',
+    target: 'Experiential Acceptance & Tolerance',
+    affordance:
+      'Experiencing acoustic dissonance, unexpected silence, or emotional intensity within a structured musical container without engaging in avoidance behaviors.',
+  },
+  {
+    dimension: 'Attentional',
+    target: 'Flexible Present-Moment Awareness',
+    affordance:
+      'Tracking, entraining to, and modulating real-time acoustic shifts, turn-taking, and timbre changes in shared play.',
+  },
+  {
+    dimension: 'Self-Dimension',
+    target: 'Self-as-Context (Transcendental Self)',
+    affordance:
+      'Cultivating the perspective of the “listener/musician” distinct from generated musical/linguistic content or transient emotional reactions.',
+  },
+  {
+    dimension: 'Behavioral',
+    target: 'Repertoire Variability & Committed Action',
+    affordance:
+      'Expanding behavioral options during active playing (e.g., breaking rigid rhythmic patterns) and aligning sonic co-creation with personal values.',
+  },
+  {
+    dimension: 'Physiological',
+    target: 'Autonomic Regulation & Entrainment',
+    affordance:
+      'Utilising acoustic tempo, rhythm, and dynamic envelope to influence physiological arousal, vagal tone, and somatic grounding.',
+  },
+];
+
+const anchors = [
+  {
+    title: 'Rigidity vs. Variability in Play',
+    text: 'Holding obsessively to a fixed tempo, repetitive scale, or narrow dynamic range functions as experiential avoidance of uncertainty or loss of control.',
+    process: 'Behavioral & Cognitive Flexibility',
+  },
+  {
+    title: 'Relational Dominance / Withdrawal',
+    text: 'Overpowering co-created sound or immediately ceasing play when another participant enters functions as avoidance of interpersonal vulnerability or threat.',
+    process: 'Interpersonal Framing & Social Connection',
+  },
+  {
+    title: 'Disorganising Impulse Spikes',
+    text: 'Unmodulated volume bursts or sudden instrument switching in response to acoustic shifts function as difficulty regulating autonomic distress.',
+    process: 'Affective Regulation & Somatic Grounding',
+  },
+  {
+    title: 'Adherence to Musical Rules',
+    text: 'High distress or cessation of play following a “wrong note” functions as rigid rule-governed behavior.',
+    process: 'Defusion & Acceptance',
+  },
+];
+
+const loopSteps = [
+  {
+    number: '01',
+    title: 'Observe',
+    text: 'Track live musical and linguistic functional anchors.',
+  },
+  {
+    number: '02',
+    title: 'Formulate',
+    text: 'Identify target process imbalance (e.g., Avoidance).',
+  },
+  {
+    number: '03',
+    title: 'Alter Context',
+    text: 'Modify musical parameter (tempo, harmonic base, call-and-response structure, or silences).',
+  },
+  {
+    number: '04',
+    title: 'Evaluate',
+    text: 'Observe if the client’s overall behavioral repertoire expands across musical or linguistic streams.',
+  },
+];
+
+const evidence = [
+  {
+    title: 'Single-Case Experimental Designs (SCEDs)',
+    text: 'Tracking targeted process variables within individuals across baseline, intervention, and follow-up phases.',
+  },
+  {
+    title: 'Micro-Longitudinal Tracking',
+    text: 'Utilising post-session or intra-session functional assessment scoring to track trajectories of change in specific process domains over time.',
+  },
+  {
+    title: 'Process-Outcome Linkage',
+    text: 'Demonstrating that clinical improvement occurs as a direct mathematical and clinical function of shifts in target processes (e.g., increases in musical/psychological flexibility) rather than non-specific therapeutic factors.',
+  },
+];
+---
+
+<BaseLayout
+  title="Process-Based Music Therapy (PBMT) — That Music Therapy Lot"
+  description="Process-Based Music Therapy (PBMT): an idiographic, functionally anchored clinical framework targeting core social and psychological processes through musical interaction, grounded in functional contextualism and Relational Frame Theory."
+>
+  <Header />
+  <main id="main">
+    <header class="page-hero">
+      <p class="section__eyebrow reveal">Clinical framework</p>
+      <h1 class="page-hero__title reveal">Process-Based Music Therapy</h1>
+      <p class="page-hero__lede reveal">
+        A proposed clinical framework for what PBMT is, how it works, and how it
+        can be operationalised — updated as the research develops.
+      </p>
+    </header>
+
+    <div class="section section--tight" style="padding-top: 0;">
+      <figure class="page-visual reveal">
+        <img
+          src="/images/web/Djembe.jpg"
+          alt="Close-up of a djembe drum skin and rope tuning"
+          width="2400"
+          height="1350"
+          loading="lazy"
+        />
+      </figure>
+    </div>
+
+    <section class="section section--tight" aria-labelledby="pbmt-intro">
+      <div class="prose reveal">
+        <p class="pbmt-note">
+          Whilst more research is done on PBMT, below is the proposed clinical
+          framework. It currently serves as the main hypothesis to be tested for
+          what PBMT is, how it works, and how it can be operationalised. As more
+          studies are completed, it will be updated to reflect what has, or
+          hasn’t been found, and add in references.
+        </p>
+
+        <h2 id="pbmt-intro">1. Core Definition &amp; Scope</h2>
+        <p>
+          Process-Based Music Therapy (PBMT) is an idiographic, functionally
+          anchored clinical framework that targets core social and psychological
+          processes (such as psychological flexibility, relational framing, and
+          emotion regulation) through active and receptive musical interaction.
+        </p>
+        <p>
+          PBMT explicitly conceptualises music as a form of verbal behavior.
+          Because musical interactions are operant, socially mediated, and
+          context-dependent, they can be evaluated through a functional
+          contextualist lens in the exact same manner as linguistic language.
+        </p>
+        <p>
+          This means that PBMT does not operate as a protocol-driven or
+          syndromal model of music therapy, or any other such model that pairs
+          interventions with DSM/ICD diagnostic categories. It is not positing
+          to replace those models, however it provides a useful framework for
+          working with all diagnoses and ages. Within this arena, clinicians
+          observe behavioural function, formulate process-level imbalances, and
+          adapt musical affordances contextually to promote psychological change
+          across both musical and linguistic domains towards more meaningful and
+          workable ways of living.
+        </p>
+
+        <h2 id="pbmt-philosophy">2. Philosophical &amp; Epistemological Foundation</h2>
+        <p>
+          PBMT is explicitly rooted in functional contextualism and Relational
+          Frame Theory (RFT).
+        </p>
+        <p>
+          Functional contextualism is the evaluation of all verbal behaviour,
+          whether linguistic (words, syntax) or musical (pitch, rhythm, timbre,
+          dynamic contour, inter-subjective timing), by its function within a
+          historic and immediate context, rather than its topography, aesthetic
+          form, or adherence to formal rules. Clinical targets are understood as
+          functional adaptation strategies.
+        </p>
+        <p>
+          Relational Frame Theory (RFT) is understood within PBMT to be the
+          driving theory behind meaning-making and change within music therapy,
+          with musical acts representing non-linguistic yet fully verbal
+          relational framing. Musical stimuli function as both non-arbitrary and
+          arbitrarily applicable relational stimuli. Musical interaction serves
+          as a non-linguistic verbal arena where transformation of stimulus
+          functions (the changing of relationship/feeling to a contextual cue)
+          occurs rapidly, either modifying or directly altering rigid,
+          rule-governed linguistic behaviour, or forming new, non-linguistic
+          relational networks in which non-linguistic populations can begin to
+          understand their sense of self and relation to others.
+        </p>
+        <p>
+          In other words, PBMT understands music therapy to be the non-linguistic
+          application of RFT to bring about meaningful change within a
+          therapeutic environment.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="pbmt-processes">
+      <p class="section__eyebrow reveal">Section 3</p>
+      <h2 class="section__title reveal" id="pbmt-processes">
+        Target Processes &amp; Musical Affordances
+      </h2>
+      <p class="section__lede reveal">
+        PBMT organises clinical targets around core psychological processes,
+        mapping each directly to the unique affordances of musical verbal
+        behavior.
+      </p>
+
+      <div class="process-map" role="list">
+        {
+          processes.map((item, index) => (
+            <article class="process-row reveal" role="listitem" style={`--i: ${index}`}>
+              <div class="process-row__index" aria-hidden="true">
+                {String(index + 1).padStart(2, '0')}
+              </div>
+              <div class="process-row__body">
+                <p class="process-row__dimension">{item.dimension}</p>
+                <h3 class="process-row__target">{item.target}</h3>
+                <div class="process-row__affordance">
+                  <p class="process-row__label">Musical affordance / clinical vehicle</p>
+                  <p>{item.affordance}</p>
+                </div>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="pbmt-assessment">
+      <p class="section__eyebrow reveal">Section 4</p>
+      <h2 class="section__title reveal" id="pbmt-assessment">
+        Functional Assessment Architecture
+      </h2>
+      <p class="section__lede reveal">
+        PBMT replaces static diagnostic categorization with a functional
+        assessment model that translates live musical verbal behaviors into
+        observable Functional Anchors.
+      </p>
+
+      <div class="assess-flow reveal" role="list" aria-label="Functional assessment pathway">
+        <div class="assess-flow__step" role="listitem">
+          <span class="assess-flow__kicker">Anchor</span>
+          <strong>Observable Musical Verbal Behavior</strong>
+        </div>
+        <div class="assess-flow__arrow" aria-hidden="true">
+          <svg viewBox="0 0 48 24" fill="none">
+            <path d="M2 12h38M32 4l12 8-12 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <div class="assess-flow__step" role="listitem">
+          <span class="assess-flow__kicker">Inference</span>
+          <strong>Inferred Function</strong>
+        </div>
+        <div class="assess-flow__arrow" aria-hidden="true">
+          <svg viewBox="0 0 48 24" fill="none">
+            <path d="M2 12h38M32 4l12 8-12 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <div class="assess-flow__step" role="listitem">
+          <span class="assess-flow__kicker">Target</span>
+          <strong>Target Process Imbalance</strong>
+        </div>
+      </div>
+
+      <h3 class="pbmt-subhead reveal">Primary Functional Anchors</h3>
+      <div class="anchor-list">
+        {
+          anchors.map((anchor, index) => (
+            <article class="anchor-card reveal">
+              <p class="anchor-card__num">{String(index + 1).padStart(2, '0')}</p>
+              <h4 class="anchor-card__title">{anchor.title}</h4>
+              <p class="anchor-card__text">{anchor.text}</p>
+              <p class="anchor-card__process">
+                <span>Target process</span>
+                {anchor.process}
+              </p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="pbmt-heuristic">
+      <p class="section__eyebrow reveal">Section 5</p>
+      <h2 class="section__title reveal" id="pbmt-heuristic">
+        Clinical Decision-Making Heuristic
+      </h2>
+      <p class="section__lede reveal">
+        Clinical choice in PBMT operates as a continuous, micro-analytical
+        feedback loop during the session across all verbal behavior streams.
+      </p>
+
+      <div class="decision-loop reveal" aria-label="Clinical decision-making loop">
+        <ol class="decision-loop__steps">
+          {
+            loopSteps.map((step) => (
+              <li class="decision-loop__step">
+                <span class="decision-loop__number">{step.number}</span>
+                <div>
+                  <h3>{step.title}</h3>
+                  <p>{step.text}</p>
+                </div>
+              </li>
+            ))
+          }
+        </ol>
+        <p class="decision-loop__return" aria-hidden="true">
+          <span>Then return to observe</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="pbmt-evidence">
+      <p class="section__eyebrow reveal">Section 6</p>
+      <h2 class="section__title reveal" id="pbmt-evidence">
+        Idiographic Evidence &amp; Evaluation Strategy
+      </h2>
+      <p class="section__lede reveal">
+        To establish empirical validity without relying on rigid, manualised
+        protocols, PBMT will need to employ an idiographic, high-frequency
+        measurement strategy.
+      </p>
+
+      <div class="reasons">
+        {
+          evidence.map((item) => (
+            <article class="reason reveal">
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="pbmt-cta">
+      <div class="consult-cta reveal">
+        <h2 id="pbmt-cta">Working with Process-Based Music Therapy</h2>
+        <p>
+          Looking for therapy grounded in this framework, or supervision and
+          consultation built around it? Get in touch.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="/#contact">Get in touch</a>
+          <a class="btn btn--ghost" href="/therapy">Therapy</a>
+          <a class="btn btn--ghost" href="/supervision">Supervision</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
