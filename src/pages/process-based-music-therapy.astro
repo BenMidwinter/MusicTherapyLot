@@ -46,22 +46,31 @@ const anchors = [
   {
     title: 'Rigidity vs. Variability in Play',
     text: 'Holding obsessively to a fixed tempo, repetitive scale, or narrow dynamic range functions as experiential avoidance of uncertainty or loss of control.',
-    process: 'Behavioral & Cognitive Flexibility',
+    processes: [
+      'Repertoire Variability & Committed Action',
+      'Experiential Acceptance & Tolerance',
+    ],
   },
   {
     title: 'Relational Dominance / Withdrawal',
     text: 'Overpowering co-created sound or immediately ceasing play when another participant enters functions as avoidance of interpersonal vulnerability or threat.',
-    process: 'Interpersonal Framing & Social Connection',
+    processes: [
+      'Flexible Present-Moment Awareness',
+      'Self-as-Context (Transcendental Self)',
+    ],
   },
   {
     title: 'Disorganising Impulse Spikes',
     text: 'Unmodulated volume bursts or sudden instrument switching in response to acoustic shifts function as difficulty regulating autonomic distress.',
-    process: 'Affective Regulation & Somatic Grounding',
+    processes: ['Autonomic Regulation & Entrainment'],
   },
   {
     title: 'Adherence to Musical Rules',
     text: 'High distress or cessation of play following a “wrong note” functions as rigid rule-governed behavior.',
-    process: 'Defusion & Acceptance',
+    processes: [
+      'Cognitive Defusion & De-literalisation',
+      'Experiential Acceptance & Tolerance',
+    ],
   },
 ];
 
@@ -276,10 +285,14 @@ const evidence = [
               <p class="anchor-card__num">{String(index + 1).padStart(2, '0')}</p>
               <h4 class="anchor-card__title">{anchor.title}</h4>
               <p class="anchor-card__text">{anchor.text}</p>
-              <p class="anchor-card__process">
-                <span>Target process</span>
-                {anchor.process}
-              </p>
+              <div class="anchor-card__process">
+                <span>{anchor.processes.length > 1 ? 'Target processes' : 'Target process'}</span>
+                <ul>
+                  {anchor.processes.map((process) => (
+                    <li>{process}</li>
+                  ))}
+                </ul>
+              </div>
             </article>
           ))
         }
