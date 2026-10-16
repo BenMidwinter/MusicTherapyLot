@@ -62,7 +62,7 @@ Process-based therapy (pioneered by Steven C. Hayes and Stefan G. Hofmann) does 
 
 Crucially, process-based therapy hinges on the understanding that diagnostic-based models are not enough to capture the complexity of lived experience, leaning into the contextual side of its history in order to understand that people and clients, when we see them, are a coordinate in space and time in a grand network map of their life so far.  They, therefore, rely on the universal understanding of how life develops and moves: evolution.
 
-Within process-based therapy, they outline 4 patterns of change, across 8 systems split into 6 dimensions and 2 levels, identifying both adaptive and maladaptive processes which are taking place.  We will look at the patterns of change below, but the systems are:
+Within process-based therapy, they outline 4 patterns of change, across 8 systems split into 6 dimensions and 2 levels, identifying both adaptive and maladaptive processes which are taking place.  This is called the Extended Evolutionary Meta Model, based on the Extended Evolutionary Synthesis in biology.  We will look at the patterns of change below, but the systems are:
 
 **The dimensions:**
 
